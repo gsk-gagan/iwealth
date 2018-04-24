@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_reward"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="24dp"
+    android:paddingBottom="0dp"
+    tools:context="com.github.florent37.materialviewpager.sample.Reward">
+
+    <TextView
+        android:id="@+id/rewardProgressText_tv"
+        android:textSize="30sp"
+        android:text="Small Savings Lead to Big Outcome"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/notificationText_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/rewardCard_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:id="@+id/rewardRelativeLayout_rl"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/side_nav_bar"
+            android:gravity="center"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+            <TextView
+                android:id="@+id/rewardText_tv"
+                android:text="$16"
+                android:textSize="80sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/rewardSelectorCard_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="5dp"
+        card_view:contentPadding="16dp">
+
+        <RelativeLayout
+            android:id="@+id/rewardSelectorRelativeLayout_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:text="Savings Amount:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingBottom="4dp"
+                android:id="@+id/tipAmountPlaceHolder_tv"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tipAmountPlaceHolder_tv"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:progress="3"
+                android:id="@+id/rewardSeekBar_sb" />
+
+            <TextView
+                android:text="$2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rewardSeekBar_sb"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/minReward_tv"/>
+
+            <TextView
+                android:text="$100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/minReward_tv"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/maxReward_tv" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/rewardCategoryCard_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="5dp"
+        card_view:contentPadding="16dp">
+
+        <LinearLayout
+            android:id="@+id/rewardCategoryRelativeLayout_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="start">
+
+            <TextView
+                android:text="Category:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <ImageView
+                    android:maxHeight="8dp"
+                    card_view:srcCompat="@drawable/md_film"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:id="@+id/movie_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"/>
+                <ImageView
+                    card_view:srcCompat="@drawable/md_gym"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:id="@+id/gym_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"/>
+                <ImageView
+                    card_view:srcCompat="@drawable/md_suitcase"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:id="@+id/office_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"/>
+                <ImageView
+                    card_view:srcCompat="@drawable/md_thumbsup"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:id="@+id/thumbsup_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"/>
+                <ImageView
+                    card_view:srcCompat="@drawable/md_wallet"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:id="@+id/wallet_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Other Spending"
+                android:textColor="@color/grey"
+                android:ems="10"
+                android:id="@+id/rewardCategoryMessage_et" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:text="Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rewardDeny_bt"
+            android:layout_weight="1" />
+        <!--android:backgroundTint="@color/yellow_bs"-->
+        <Button
+            android:text="OK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rewardApprove_bt"
+            android:backgroundTint="@color/green_bs"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+</LinearLayout>
